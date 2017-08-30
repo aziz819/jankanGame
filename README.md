@@ -1,4 +1,4 @@
-#✌️✊✋ゲームやりましょう
+# ✌️✊✋ゲームやりましょう
 
 1.git clone git@github.com:aziz819/jankenGame.git → ローカルにクローン<br>
 2.$ janken → 実行<br>
