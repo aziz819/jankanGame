@@ -2,7 +2,7 @@ package battle
 
 import m "math"
 
-//CPUがランダムで選んだ値と人間が入力した値を比べて勝負決める
+// CPUがランダムで選んだ値と人間が入力した値を比べて勝負決める
 func IsAiWin(ai Finger, user Finger) int {
 
 	result := ai.Value - user.Value // CPUのランダム値から人間が選んだ値を引く

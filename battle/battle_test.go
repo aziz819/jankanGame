@@ -44,6 +44,7 @@ func TestRandFinger(t *testing.T) {
 	}
 }
 
+// CPUの手と人間の手勝負テスト
 func TestIsAiWin(t *testing.T) {
 	var cpu, user Finger
 	cpu = RandFinger()

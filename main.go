@@ -10,12 +10,12 @@ import (
 )
 
 func main() {
-	// CPUプレイヤーと人間プレイヤーの型定義
-	var aiFinger, userFinger battle.Finger
+	var aiFinger, userFinger battle.Finger // CPUプレイヤーと人間プレイヤーの型定義
 
 	reader := b.NewReader(o.Stdin) // 標準入力読み込み
 
 	f.Printf("CPUとジャンケンしましょう!\n\t《遊び方》\n1から3の数字を入力してください。\nゲーム終了したいなら9を入力してください。\n%d->✊\n%d->✌️\n%d->✋\n9->終了\n------------[1回目]-------------\n", battle.Rock, battle.Scissors, battle.Paper)
+
 	for { // 入力されたのは数字かどうかを確認しています。もし数字9であればゲーム終了します。
 		data, _, err := reader.ReadLine() // 入力値を読み込んでいます。
 
