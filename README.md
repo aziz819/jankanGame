@@ -1,5 +1,6 @@
-# ✌️✊✋ゲームやりましょう
+#✌️✊✋ゲームやりましょう
 
-1.$ go get git@github.com:aziz819/jankanGame.git →　ローカルにクローン<br>
-2.$ janken →　実行<br>
-3.$ go test -v →　テスト
+1.git clone git@github.com:aziz819/jankenGame.git → ローカルにクローン<br>
+2.$ janken → 実行<br>
+3.$ go test -v → テスト、battleパッケージの下で行う
+4.ジャケンをを始めよう！
