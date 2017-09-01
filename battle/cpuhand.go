@@ -5,6 +5,7 @@ import (
 	t "time"
 )
 
+// CPUの手をランダムで選ぶ
 func RandFinger() (finger Finger) {
 	rand := mr.New(mr.NewSource(t.Now().UnixNano()))
 	switch rand.Intn(3) { // 0 ~ 3乱数
