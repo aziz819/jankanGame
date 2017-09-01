@@ -1,6 +1,6 @@
 # ✌️✊✋ゲームやりましょう
 
-1. ローカルにクローン<br>
+1. ソースコードパッケージのダウンロード<br>
   $ go get github.com/aziz819/jankenGame<br>
 2. 実行<br>
 $ janken<br>
