@@ -6,7 +6,7 @@ import (
 	o "os"
 	s "strconv"
 
-	"github.com/user/janken/battle"
+	"github.com/aziz819/jankenGame/battle"
 )
 
 func main() {
