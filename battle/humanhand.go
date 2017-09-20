@@ -1,7 +1,7 @@
 package battle
 
-// 人間の出した手を返す
-func CreateFinger(n int) (finger Finger) {
+// HumanFinger 人間の出した手を返す
+func HumanFinger(n int) (finger Finger) {
 	switch n {
 	case Rock:
 		finger.Value = Rock

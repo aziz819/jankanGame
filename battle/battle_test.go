@@ -8,11 +8,11 @@ import (
 )
 
 // 人間の手をテストする
-func TestCreateFinger(t *testing.T) {
+func TestYourFinger(t *testing.T) {
 	var result Finger
 	rand := rand.New(rand.NewSource(time.Now().UnixNano()))
 	num := rand.Intn(3) + 1
-	result = CreateFinger(num)
+	result = HumanFinger(num)
 
 	if result.Value == Rock && result.Name == Rockname {
 		fmt.Printf("オッケー[%d]==[1] and [%s] == [✊]", result.Value, result.Name)
@@ -28,9 +28,9 @@ func TestCreateFinger(t *testing.T) {
 }
 
 // CPUの手をテストする
-func TestRandFinger(t *testing.T) {
+func TestCpuRandomFinger(t *testing.T) {
 	var result Finger
-	result = RandFinger()
+	result = CpuRandomFinger()
 
 	if result.Value == Rock && result.Name == Rockname {
 		fmt.Printf("オッケー[%d]==[1] and [%s] == [✊]", result.Value, result.Name)
@@ -45,15 +45,15 @@ func TestRandFinger(t *testing.T) {
 }
 
 // CPUの手と人間の手勝負テスト
-func TestIsAiWin(t *testing.T) {
+func TestJudgement(t *testing.T) {
 	var cpu, user Finger
-	cpu = RandFinger()
+	cpu = CpuRandomFinger()
 
 	rand := rand.New(rand.NewSource(time.Now().UnixNano()))
 	num := rand.Intn(3) + 1
-	user = CreateFinger(num)
+	user = HumanFinger(num)
 
-	result := IsAiWin(cpu, user)
+	result := Judgement(cpu, user)
 
 	if result == 1 {
 		fmt.Printf("オッケー[%d] == Win[1]", result)

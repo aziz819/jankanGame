@@ -1,21 +1,22 @@
 package battle
 
 import (
-	mr "math/rand"
-	t "time"
+	"math/rand"
+	"time"
 )
 
-// CPUの手をランダムで選ぶ
-func RandFinger() (finger Finger) {
-	rand := mr.New(mr.NewSource(t.Now().UnixNano()))
-	switch rand.Intn(3) { // 0 ~ 3乱数
-	case 0:
+// CPURandomFinger の手をランダムで選ぶ
+func CPURandomFinger() (finger Finger) {
+	rand := rand.New(rand.NewSource(time.Now().UnixNano()))
+	var num = rand.Intn(3) + 1
+	switch num {
+	case 1:
 		finger.Value = Rock
 		finger.Name = Rockname
-	case 1:
+	case 2:
 		finger.Value = Scissors
 		finger.Name = Scissorsname
-	case 2:
+	case 3:
 		finger.Value = Paper
 		finger.Name = Papername
 	}
