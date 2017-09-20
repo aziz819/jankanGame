@@ -49,6 +49,6 @@ const (
 
 // Finger ...フィールドの型定義
 type Finger struct {
-	Value int
-	Name  string
+	Value FingerNum
+	Name  FingerAppearance
 }

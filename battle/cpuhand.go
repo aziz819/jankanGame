@@ -1,7 +1,6 @@
 package battle
 
 import (
-	"jyanken/battle"
 	"math/rand"
 	"time"
 )
@@ -10,16 +9,16 @@ import (
 func CPURandomFinger() (finger Finger) {
 	rand := rand.New(rand.NewSource(time.Now().UnixNano()))
 	var num = rand.Intn(3) + 1
-	switch num {
-	case battle.Rock:
-		finger.Value = battle.Rock
-		finger.Name = battle.Rockname
-	case battle.Scissors:
-		finger.Value = battle.Scissors
-		finger.Name = battle.Scissorsname
-	case battle.Draw:
-		finger.Value = battle.Paper
-		finger.Name = battle.Papername
+	switch FingerNum(num) {
+	case Rock:
+		finger.Value = Rock
+		finger.Name = Rockname
+	case Scissors:
+		finger.Value = Scissors
+		finger.Name = Scissorsname
+	case Paper:
+		finger.Value = Paper
+		finger.Name = Papername
 	}
 	return
 }
